@@ -1,0 +1,27 @@
+{
+  "students": [{
+    "id": 1,
+    "name": "张三",
+    "gender": 0,
+    "age": 18,
+    "hobbings": ["吃饭", "shuijiao", "喝酒"]
+  }, {
+    "id": 2,
+    "name": "张三",
+    "gender": 0,
+    "age": 18,
+    "hobbings": ["吃饭", "shuijiao", "喝酒"]
+  }, {
+    "id": 3,
+    "name": "张三",
+    "gender": 0,
+    "age": 18,
+    "hobbings": ["吃饭", "shuijiao", "喝酒"]
+  }, {
+    "id": 4,
+    "name": "张三",
+    "gender": 0,
+    "age": 18,
+    "hobbings": ["吃饭", "shuijiao", "喝酒"]
+  }]
+}
