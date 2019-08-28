@@ -4,7 +4,7 @@
  * @Author: zero
  * @Date: 2019-08-28 13:53:57
  * @LastEditors: zero
- * @LastEditTime: 2019-08-28 18:01:21
+ * @LastEditTime: 2019-08-28 23:21:48
  */
 var mongoose = require('mongoose')
 
@@ -65,14 +65,39 @@ var User = mongoose.model('User', uesrSchema)
 //查询数据
 //第一个参数是查询条件，如果没有第一个参数即查询所有
 //findOne()查询一个
-User.find({
-  username: 'q'
-}, function (err, ret) {
-  if (err) {
-    console.log(err);
+// User.find({
+//   username: 'q'
+// }, function (err, ret) {
+//   if (err) {
+//     console.log(err);
 
-  } else {
-    console.log(ret);
+//   } else {
+//     console.log(ret);
 
-  }
-})
+//   }
+// })
+
+// 删除数据
+// User.remove({
+//   username: 'q'
+// }, function (err, data) {
+//   if (err) {
+//     console.log('删除失败!');
+//   } else {
+//     console.log(data);
+
+//     console.log('删除成功');
+
+//   }
+// })
+
+//更新数据
+// User.findByIdAndUpdate('', {
+//   password: '123'
+// }, function (err, data) {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(data);
+//   }
+// })
