@@ -4,7 +4,7 @@
  * @Author: zero
  * @Date: 2019-08-28 13:53:57
  * @LastEditors: zero
- * @LastEditTime: 2019-08-28 23:21:48
+ * @LastEditTime: 2019-08-29 17:02:44
  */
 var mongoose = require('mongoose')
 
@@ -76,6 +76,44 @@ var User = mongoose.model('User', uesrSchema)
 
 //   }
 // })
+
+function find(params, addParams) {
+  return new Promise(function (resole, reject) {
+    User.find(params).then((data) => {
+      if (data.length === 0) {
+        console.log(data);
+
+        resole(addParams)
+      }
+    }).catch((err) => {
+      reject(err)
+    })
+  })
+}
+function add(addParams) {
+  return new Promise(function (resole, reject) {
+    addParams.save(function (err, data) {
+      if (err) {
+        reject(err)
+      } else {
+        resole(data)
+      }
+    })
+  })
+}
+find({ username: '12313' }, new User({
+  username: 'q',
+  password: '123456',
+  email: '1137774080@qq.com'
+})
+).then((data) => {
+  return add(data)
+}).then((err) => {
+  console.log('保存成功!');
+})
+
+
+
 
 // 删除数据
 // User.remove({
