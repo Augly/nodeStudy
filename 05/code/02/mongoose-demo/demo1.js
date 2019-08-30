@@ -4,14 +4,13 @@
  * @Author: zero
  * @Date: 2019-08-28 11:42:54
  * @LastEditors: zero
- * @LastEditTime: 2019-08-28 11:49:06
+ * @LastEditTime: 2019-08-30 15:00:41
  */
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true });
 
 //创建一个模型
 const Cat = mongoose.model('Cat', { name: String });
-
 
 
 for (let index = 0; index < 100; index++) {
